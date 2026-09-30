@@ -3,8 +3,17 @@
 # You are going to write a very simple program:
 
 # Ask a user to enter two numbers (one per input)
+try :
+    num1 = int(input("enter a number")) 
+    num2 = int(input("enter another number"))
+    
+except:
+    print("That is not a number ")
 
 # multiply those numbers together
+result=(num1 * num2)
+print(result)
+
 
 # print out the result
 
