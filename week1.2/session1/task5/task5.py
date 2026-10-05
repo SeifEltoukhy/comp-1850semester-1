@@ -9,8 +9,11 @@ rivers = {
 print(rivers)
 
 # Add two new entries to the rivers database
+rivers["Manchester"] = "Irwell" 
+rivers["Egypt"]="Nile"
 
 # Display all the keys
+print(rivers.keys())
 
 # Display all the values
 
