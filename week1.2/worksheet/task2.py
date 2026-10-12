@@ -16,8 +16,7 @@ if len(numbers) % 2 == 1:
     median = numbers[mid]
 else:
     median = (numbers[mid - 1] + numbers[mid]) / 2
-
-print("Median =", median)
+    print("Median =", median)
     
 
 
