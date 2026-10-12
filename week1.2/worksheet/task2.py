@@ -12,11 +12,13 @@ else:
     print("Maximum =", max(numbers))
     print ("Mean =", (sum(numbers)) / (len(numbers)))
     mid=len(numbers)//2
-if len(numbers) % 2 == 1:
-    median = numbers[mid]
-else:
-    median = (numbers[mid - 1] + numbers[mid]) / 2
-    print("Median =", median)
+
+    if len(numbers) % 2 == 1:
+        median = numbers[mid]
+    else:
+        median = (numbers[mid - 1] + numbers[mid]) / 2
+
+print("Median =", median)
     
 
 
