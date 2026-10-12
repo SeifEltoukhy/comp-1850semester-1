@@ -18,7 +18,7 @@ else:
     else:
         median = (numbers[mid - 1] + numbers[mid]) / 2
 
-print("Median =", median)
+    print("Median =", median)
     
 
 
