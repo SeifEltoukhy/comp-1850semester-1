@@ -7,6 +7,7 @@ balance = 1000.0
 
 # Ask user for the desired transaction type
 
+
 print("Welcome to the ATM!")
 print("Select an option: ")
 print("1. Check Balance")
@@ -16,7 +17,7 @@ option = int(input("Enter your option (1-3): "))
 
 # Conditional block for ATM operations
 
-if XXX:
+if  option == 1:
     print(f"Your current balance is: £{balance:.2f}")
 elif XXX:
     deposit_amount = float(input("Enter the amount to deposit: "))
