@@ -8,10 +8,10 @@ if numbers ==[]:
 
 else:
     numbers.sort()
-    print ("Minimum =" ,min(numbers))
-    print("Maximum =" ,max(numbers))
+    print ("Minimum =", min(numbers))
+    print("Maximum =", max(numbers))
     print ("Mean =", (sum(numbers)) / (len(numbers)))
-    mid=len(numbers)/2
+    mid=len(numbers)//2
 if len(numbers) % 2 == 1:
     median = numbers[mid]
 else:
