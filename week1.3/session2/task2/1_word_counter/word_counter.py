@@ -15,3 +15,14 @@
 # story.txt - 290
 # story2.txt - 326
 # glasses.txt - 210
+text="Hi my name is seif i want to play fifa , futchamps blad blad blad blahhh . cristian ronaldo sewyyy . "
+word=text.split()
+word_count={}
+for word in word:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+print(word_count)
+
+----------------------------------------------------------------------
