@@ -15,13 +15,13 @@ state = "red"
 while systime < maxtime:
     systime = systime + 1
 
-if systime % 15 < 4:
+    if systime % 15 < 4:
         state = "red"
-elif systime % 15 < 7:
+    elif systime % 15 < 7:
         state = "red_amber"
-elif systime % 15 < 12:
+    elif systime % 15 < 12:
         state = "green"
-else:
+    else:
         state = "amber"
 
 print(f"Time {systime:03} State {state}")
