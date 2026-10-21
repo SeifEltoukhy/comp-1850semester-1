@@ -10,7 +10,7 @@ systime = 0
 maxtime = int(input())  # read an integer number of steps (>0)
 
 state = "red"
-
+print(f"Time {systime:03} State {state}")
 
 while systime < maxtime:
     systime = systime + 1
