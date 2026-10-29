@@ -24,6 +24,8 @@ def currency_converter(amount, from_currency, to_currency):
     
     rate1=conversion_rate[from_currency][to_currency]
     finalcurrency=amount*rate1
+    if finalcurrency <= 0:
+        finalcurrency=0.0
 
     return finalcurrency
 
