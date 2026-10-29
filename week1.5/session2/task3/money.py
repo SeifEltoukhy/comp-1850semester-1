@@ -9,13 +9,10 @@ class Money:
         """
         Creates a Money object, given the number of pounds and pence.
         """
-        # Add validation code here, to check that
-        # - the pounds parameter is an integer
-        # - pounds is not negative
-        # - the pence parameter is an integer
-        # - pence is not negative and not greater than 99
-        # Raise appropriate exceptions if any of these are violated
-
+        if not isinstance(pounds,int):
+            raise TypeError("pounds cant be negative ")
+        if pounds < 0:
+            raise ValueError("value must be graeter than zero")
         self.pounds = pounds
         self.pence = pence
 
@@ -34,3 +31,11 @@ class Money:
         # Add code here to check that parameter 'other' is a Money object,
         # add self to other, then return the sum as a new Money object
         # (see README for hints and tips)
+        if not isinstance(other,Money):
+            raise TypeError("not money pbject")
+
+        Sum_pounds = self.pounds+other.pounds
+        extrapound=(self.pence+other.pence)//100
+        sumpence=(self.pence+other.pence)%100
+
+        return Money(Sum_pounds)
