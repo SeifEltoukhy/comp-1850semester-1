@@ -15,6 +15,8 @@ class Rectangle:
             raise TypeError("height should be an integer")
         if width <=0:
             raise ValueError("width should be greater than 0")
+        if height <= 0:
+            raise ValueError("height should be greater than 0")
         self.width = width
         self.height = height
     def is_square(self):
