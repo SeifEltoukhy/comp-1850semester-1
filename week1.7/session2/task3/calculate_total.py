@@ -11,3 +11,9 @@ tax_percentage = 0.05
 
 final_amount = calculate_total(item_price, tax_percentage)
 print(f"Final Amount: {final_amount}")
+
+item_price=20
+tax_percentage=0.05
+
+final_amount=calculate_total(item_price,tax_percentage)
+print(f"Final amount :{final_amount} ")
