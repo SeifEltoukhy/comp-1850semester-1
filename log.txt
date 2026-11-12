@@ -1,0 +1,4 @@
+INFO:root:calculate_average(): started
+DEBUG:root:total score is 263
+DEBUG:root:total assignments you have is 3
+DEBUG:root: - 87
