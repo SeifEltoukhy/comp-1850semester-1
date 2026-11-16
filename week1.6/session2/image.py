@@ -68,25 +68,28 @@ class Image:
 
         Any existing image data will be replaced.
         """
-        with open(filename) as imgfile:
+        with open(filename,"rb") as imgfile:
             self._parse_magic_number(imgfile)
             self._parse_dimensions(imgfile)
             self._parse_max_value(imgfile)
             self._parse_pixels(imgfile)
 
     def _parse_magic_number(self, imgfile):
-        line = imgfile.readline().strip()
-        if line != "P2":
+        line = imgfile.readline().decode().strip()
+        if line not in ("P2", "P5"):
             raise ImageError("unrecognized magic number")
 
+        self.format = line
+
     def _parse_dimensions(self, imgfile):
-        line = imgfile.readline().strip()
-        if line.startswith("#"):
-            # Ignore comment and read another line
-            line = imgfile.readline().strip()
-        parts = line.split()
-        self.width = int(parts[0])
-        self.height = int(parts[1])
+        line = imgfile.readline().decode().strip()
+
+    while line.startswith("#"):
+        line = imgfile.readline().decode().strip()
+
+    parts = line.split()
+    self.width = int(parts[0])
+    self.height = int(parts[1])
 
     def _parse_max_value(self, imgfile):
         line = imgfile.readline().strip()
@@ -152,3 +155,4 @@ class Image:
             for value in self.pixels[start:start + self.width]:
                 print(f"{value:4d}", end="", file=imgfile)
             print(file=imgfile)
+
