@@ -18,3 +18,24 @@
 # - Each row has: Date, Time, IP_Address, User_Agent, Request, Status_Code
 # - You need to find rows where Request = "POST /login" AND Status_Code = "401"
 # - You can use list comprehension or loops to filter the data
+
+import csv
+
+file = "week1.3/session2/task2/2_log_data/site.log"
+
+try:
+    with open(file, "r") as file:
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            if (row["Request"].strip() == "POST /login"
+                    and row["Status_Code"].strip() == "401"):
+
+                print(
+                    f"IP address {row['IP_Address']} "
+                    f"failed to login at {row['Time']} "
+                    f"on {row['Date']}"
+                )
+
+except FileNotFoundError:
+    print("File not found!")

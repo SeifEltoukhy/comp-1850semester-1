@@ -15,7 +15,7 @@
 # story.txt - 290
 # story2.txt - 326
 # glasses.txt - 210
-text="Hi my name is seif i want to play fifa , futchamps blad blad blad blahhh . cristian ronaldo sewyyy . "
+text="Hi my name is seif i want to play fifa , futchamps blad blad blad blahhh . cristiano ronaldo sewyyy . "
 word=text.split()
 word_count={}
 for word in word:
@@ -25,4 +25,9 @@ for word in word:
         word_count[word] = 1
 print(word_count)
 
-----------------------------------------------------------------------
+
+with open("week1.3/session2/task2/1_word_counter/story.txt", "r") as file:
+    text = file.read()
+words = text.split()
+word_count = len(words)
+print("Total number of words:", word_count)
