@@ -9,7 +9,16 @@ plt.plot(x,y)  # create a 2d plot
 plt.xlabel('x')
 plt.ylabel('y=x^2')  # annotate
 
-plt.show()  # display
+  # display
+plt.title("Simple Matplotlib Graph")
+plt.annotate("Point (10, 100)",
+  xy=(10, 100),
+ xytext=(5, 200),
+
+ arrowprops=dict(arrowstyle="->"))
+plt.grid(True)
+plt.legend()
+plt.show()
 
 # Test the example as is on the slides
 # - Modify the data and the range
