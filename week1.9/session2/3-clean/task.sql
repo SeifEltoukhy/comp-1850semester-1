@@ -35,3 +35,6 @@ CREATE TABLE reviews (
     rating     INTEGER CHECK (rating BETWEEN 1 AND 5),
     comment    TEXT,                      -- optional, may be NULL
     FOREIGN KEY (order_id) REFERENCES orders(order_id)'''
+
+    INSERT INTO customers(customer_id ,name , email) VALUES(1 , 'Alice' ,'alice@gmail.com' );
+    INSERT INTO customers(customer_id ,name , email) VALUES(2 , 'Bob' ,'bob@gmail.com' ,NULL );
