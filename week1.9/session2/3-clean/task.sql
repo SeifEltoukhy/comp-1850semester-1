@@ -7,3 +7,6 @@
 
 -- YOU SHOULD RUN ANY 'UPDATES' AS SELECTS FIRST - it's very easy to accidentally update more than you intended..
 
+SELECT DISTINCT cuisine FROM restaurants;
+UPDATE restaurants
+SET cuisine = UPPER(SUBSTR(cuisine),1,1))||LOWER(SUBSTR(TRIM(cuisine),2));
