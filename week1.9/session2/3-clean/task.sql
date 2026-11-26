@@ -9,4 +9,4 @@
 
 SELECT DISTINCT cuisine FROM restaurants;
 UPDATE restaurants
-SET cuisine = UPPER(SUBSTR(cuisine),1,1))||LOWER(SUBSTR(TRIM(cuisine),2));
+SET cuisine = UPPER(SUBSTR(cuisine),1,1)||LOWER(SUBSTR(TRIM(cuisine),2));
